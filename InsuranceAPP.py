@@ -65,43 +65,43 @@ st.markdown("""
 
 class InsurancePredictor:
     def __init__(self):
-        self.feature_names = ['age', 'sex', 'bmi', 'children', 'smoker', 'region']
+        self.feature_names = ['Age', 'Sex', 'BMI', 'Children', 'Smoker', 'Region']
 
         self.feature_info = {
-            'age': {
+            'Age': {
                 'desc': 'Age of the primary beneficiary',
                 'type': 'number',
-                'min': 18, 'max': 80, 'step': 1,
+                'min': 1, 'max': 150, 'step': 1,
                 'default': 35,
-                'normal_range': (18, 65)
+                'normal_range': (1, 150)
             },
-            'sex': {
+            'Sex': {
                 'desc': 'Gender of the beneficiary',
                 'type': 'select',
                 'options': {'0': 'Female', '1': 'Male'},
                 'default': 0
             },
-            'bmi': {
+            'BMI': {
                 'desc': 'Body Mass Index',
                 'type': 'number',
                 'min': 15.0, 'max': 50.0, 'step': 0.1,
                 'default': 25.0,
                 'normal_range': (18.5, 24.9)
             },
-            'children': {
+            'Children': {
                 'desc': 'Number of children covered by health insurance',
                 'type': 'number',
-                'min': 0, 'max': 10, 'step': 1,
+                'min': 0, 'max': 15, 'step': 1,
                 'default': 1,
-                'normal_range': (0, 3)
+                'normal_range': (0, 5)
             },
-            'smoker': {
+            'Smoker': {
                 'desc': 'Smoking status',
                 'type': 'select',
                 'options': {'0': 'No', '1': 'Yes'},
                 'default': 0
             },
-            'region': {
+            'Region': {
                 'desc': 'Residential area in the US',
                 'type': 'select',
                 'options': {
